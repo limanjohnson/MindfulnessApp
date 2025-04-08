@@ -97,6 +97,14 @@ button:focus-visible {
 
 /* Start of Header CSS */
 
+.desktopView {
+  display:block;
+}
+
+.mobileView {
+  display:none;
+}
+
 .nav-banner {
   display: flex;
   flex-direction:row;
@@ -122,129 +130,65 @@ button:focus-visible {
 }
 
 .links, .login {
-  display:none;
+  display:flex;
 }
 
 .login {
   margin-right:16px;
 }
 
-.hamburger-container a {
-  width: 70%;
-  margin-right: 16px;
-  display: flex;
-  justify-content: flex-end;
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right:20px;
+  font-size: 24px;
+  background:none;
+  border:none;
   cursor:pointer;
 }
 
-.hamburger {
-  margin: 0 auto;
-  /*margin-top: 30px;*/
-  width: 30px;
-  height: 30px;
-  position: relative;
+.sliding-menu {
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:100%;
+  height:100%;
+  background-color:#333;
+  color:white;
+  box-shadow:-2px 0 5px rgba(0,0,0,0.5);
+  transition:right 0.4s ease;
+  z-index:100;
 }
 
-.hamburger .bar {
-  padding: 0;
-  width: 30px;
-  height: 4px;
-  background-color: maroon;
-  display: block;
-  border-radius: 4px;
-  transition: all 0.4s ease-in-out;
-  position: absolute;
+.sliding-menu ul {
+  list-style:none;
+  padding: 20px;
+  margin:0;
 }
 
-.bar1 {
-  top: 0;
+.sliding-menu li {
+  margin:20px 0;
 }
 
-.bar2,
-.bar3 {
-  top: 13.5px;
+.sliding-menu a {
+  color:white;
+  text-decoration:none;
 }
 
-.bar3 {
+.sliding-menu .close-button {
+  position:absolute;
+  top:0;
+  right:20px;
+  font-size:24px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.sliding-menu.open {
   right: 0;
 }
-
-.bar4 {
-  bottom: 0;
-}
-
-/* HAMBURGER 1 */
-.checkbox1:checked + label > .hamburger1 > .bar1{
-  transform: rotate(45deg);
-  transform-origin: 5%;
-  width: 41px
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar2 {
-  transform: translateX(-40px);
-  background-color: transparent;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar3 {
-  transform: translateX(40px);
-  background-color: transparent;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar4 {
-  transform-origin: 5%;
-  transform: rotate(-45deg);
-  width: 41px;
-}
-
-input[type="checkbox"] {
-  display:none;
-}
-
-label[for="checkbox1"] {
-  cursor:pointer;
-}
-
-:modal {
-  border: 2px solid #ddaf11;
-  background-color: #aaaaaa;
-  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
-  border-radius:10px;
-}
-
-.overlay-content {
-  margin: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*.overlay-content a {*/
-/*  margin-top: 10px;*/
-/*  font-size: 20px;*/
-/*  font-weight: 500;*/
-/*  color: #646cff;*/
-/*  text-decoration: inherit;*/
-/*}*/
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 24px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-/*.overlay {*/
-/*  position: absolute;*/
-/*  top: 20px;*/
-/*  right: 45px;*/
-/*  font-size: 60px;*/
-/*}*/
 
 /* End of Header CSS */
 
@@ -259,12 +203,26 @@ main {
 /* Start of Footer CSS */
 
 #site-footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
   display: flex;
   justify-content: center;
   align-items:center;
   background: #ddaf11;
-  height:3.5em;
+  height:4.5em;
   font-size: 10px;
 }
 
 /* End of Footer CSS */
+
+/* Mobile Styles */
+@media (max-width:768px) {
+  .desktopView {
+    display:none;
+  }
+
+  .mobileView {
+    display:block;
+  }
+}

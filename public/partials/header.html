@@ -3,39 +3,31 @@
     <img src="../../public/images/sun.svg" alt="sun">
     <h1>MINDFULNESS</h1>
   </div>
-  <div class="links">
-    <a href="#">Home</a>
-    <a href="#">Page 2</a>
-    <a href="#">Page 3</a>
-    <a href="#">Page 4</a>
-  </div>
-  <div class="login">
-    <a>Log In</a>
+  <div class="desktopView">
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">Page 2</a>
+      <a href="#">Page 3</a>
+      <a href="#">Page 4</a>
+    </div>
+    <div class="login">
+      <a>Log In</a>
+    </div>
   </div>
 
-  <div class="hamburger-container">
-    <a href="javascript:void(0)">
-    <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
-    <label for="checkbox1">
-      <div class="hamburger hamburger1">
-        <span class="bar bar1"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
-        <span class="bar bar4"></span>
-      </div>
-    </label>
-    </a>
+  <div class="mobileView">
+
+    <button id="menuButton" class="hamburger-menu">☰</button>
+
+    <div id="slidingMenu" class="sliding-menu">
+      <button id="closeButton" class="close-button">✖</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
   </div>
+
 </div>
-
-<dialog id="menuOverlay" class="overlay">
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <h2>Menu</h2>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-    <a href="#">Log In</a>
-  </div>
-</dialog>

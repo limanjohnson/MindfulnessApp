@@ -1,12 +1,9 @@
-import { loadHeaderFooter, toggleMenu, hamburgerMenu } from "./utils.mjs"
+import { loadHeaderFooter, mobileMenuToggle } from "./utils.mjs"
 
 document.addEventListener("DOMContentLoaded", () => {
   loadHeaderFooter().then(() => {
-    toggleMenu();
-    hamburgerMenu();
+    mobileMenuToggle();
   });
-  window.addEventListener("resize", hamburgerMenu);
-
 })
 
 
