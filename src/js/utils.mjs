@@ -59,32 +59,24 @@ export function hamburgerMenu() {
     loginElement.style.display = "flex";
   }
 }
- export function openCloseMenu() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const hamburgerCheckbox = document.getElementById("checkbox1");
-    const menuOverlay = document.getElementById("menuOverlay");
 
-    if (!hamburgerCheckbox || !menuOverlay) {
-      console.error("There is an error with the openCloseMenu function");
-      return;
-    }
+export function toggleMenu() {
+  const hamburgerElement = document.querySelector(".hamburger-container")
+  const menuOverlay = document.getElementById("menuOverlay")
 
-    hamburgerCheckbox.addEventListener("change", () => {
-      if (hamburgerCheckbox.checked) {
-        menuOverlay.style.width = "100%";
-      } else {
-        menuOverlay.style.width = "0%"
-      }
-    });
-
-    const overlayLinks = document.querySelectorAll(".overlay-content a")
-    overlayLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        hamburgerCheckbox.checked = false;
-        menuOverlay.style.display = "flex";
-      });
-    });
+  // Open modal after clicking hamburger menu
+  hamburgerElement.addEventListener("click", () => {
+    menuOverlay.showModal();
   });
- }
+
+  // Close modal after clicking on link or outside.
+  menuOverlay.addEventListener("click", () => {
+    if (event.target === menuOverlay) {
+      menuOverlay.close();
+    }
+  })
+}
+
+
 
  //add a comment
