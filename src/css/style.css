@@ -218,6 +218,22 @@ main {
 
 /* Mobile Styles */
 @media (max-width:768px) {
+
+  .site-logo {
+    margin-top:12px;
+  }
+
+  .site-logo img {
+    height:40px;
+    width:30px;
+    margin-left:12px;
+  }
+
+  .site-logo h1 {
+    font-size:1.5em;
+    margin:0 0 0 12px;
+  }
+
   .desktopView {
     display:none;
   }
