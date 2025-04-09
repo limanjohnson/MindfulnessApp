@@ -1,5 +1,9 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filenamee = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filenamee);
 
 const app = express();
 
