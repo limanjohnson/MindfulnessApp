@@ -5,13 +5,13 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
+    "start-server": "node server.js",
     "start": "vite",
     "build": "vite build --emptyOutDir",
     "lint": "eslint *.js src/**/*.js",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
     "test": "jest",
-    "preview": "vite preview",
-    "start-server": "node server.js"
+    "preview": "vite preview"
   },
   "author": "Shane Thompson",
   "license": "ISC",
