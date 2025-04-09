@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve static file
-app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.resolve(__dirname, "dist")));
 
 app.get("/api/message", (req, res) => {
   res.json({message: "Hello from the backend"});
