@@ -4,6 +4,7 @@ export function renderWithTemplate(
   data,
   callback
 ){
+  parentElement.innerHTML = "";
   parentElement.insertAdjacentHTML("afterbegin", template);
   // parentElement.innerHTML = template;
   if (callback) {
@@ -19,11 +20,11 @@ export async function loadTemplate(path) {
 }
 
 export async function loadHeaderFooter() {
-  const headerTemplate = await loadTemplate("partials/header.html");
+  const headerTemplate = await loadTemplate("../partials/header.html");
   const headerElement = await document.getElementById("site-header");
   renderWithTemplate(headerTemplate, headerElement);
 
-  const footerTemplate = await loadTemplate("partials/footer.html");
+  const footerTemplate = await loadTemplate("../partials/footer.html");
   const footerElement = await document.getElementById("site-footer");
   renderWithTemplate(footerTemplate, footerElement);
 }

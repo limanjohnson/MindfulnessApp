@@ -257,15 +257,91 @@ main {
     display:block;
   }
 
-  /* MAIN */
-  .main-body-container {
+  /****** MAIN ******/
+
+  main {
+    flex-grow: 1;
+    overflow-y:scroll;
+    /*padding-bottom:4.5em;*/
+  }
+
+  /* activities */
+  .main-activities-container {
+    display:grid;
+    grid-template-columns: 1fr;
+
+    padding:0;
+    margin: 1em;
+
+  }
+
+  #activities h1 {
+    text-align:center;
+    margin:0;
+
+    border: 2px #55969e solid;
+    border-radius: 5px;
+    background:	#d6f0f5;
+  }
+
+  .activity-list {
+    display:flex;
+    flex-direction:column;
+    margin-top:1em;
+    min-height:25vh;
+  }
+
+  .activity-list a {
+    font-weight: 700;
+    font-size:1.5em;
+    margin:0.5em 0;
+    text-align:center;
+  }
+
+  #journal {
+    color: #58b9ed;
+
+  }
+
+  #breathing {
+    color: #c08ded;
+  }
+
+  #reflection {
+    color: #f3a6a6;
+  }
+
+  #listing {
+    color: #bdb68e;
+  }
+
+  /* journal */
+  .main-journal-container {
+    display:grid;
+    grid-template-columns: 1fr;
+
+    padding:0;
+    margin: 1em;
+  }
+
+  .main-journal-container div h1 {
+    text-align:center;
+    margin:0;
+
+    border: 2px #55969e solid;
+    border-radius: 5px;
+    background:	#d6f0f5;
+  }
+
+  /* dashboard */
+  .main-dashboard-container {
     display: grid;
     grid-template-columns: 1fr;
 
     padding:1em;
+    margin: 1em 1em 3em 1em;
 
-    margin: 1em;
-    height: 70vh;
+    height: 60vh;
 
     border: 2px #55969e solid;
     border-radius: 5px;
