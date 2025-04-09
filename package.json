@@ -5,8 +5,7 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start-server": "node server.js",
-    "start": "vite",
+    "start": "node server.js",
     "build": "vite build --emptyOutDir",
     "lint": "eslint *.js src/**/*.js",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
@@ -40,5 +39,9 @@
   ],
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "engines": {
+    "node": "16"
   }
 }
+
