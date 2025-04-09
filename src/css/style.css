@@ -261,7 +261,7 @@ main {
 
   main {
     flex-grow: 1;
-    overflow-y:scroll;
+    /*overflow-y:scroll;*/
     /*padding-bottom:4.5em;*/
   }
 
@@ -322,6 +322,8 @@ main {
 
     padding:0;
     margin: 1em;
+
+    gap: 10px;
   }
 
   .main-journal-container div h1 {
@@ -332,6 +334,7 @@ main {
     border-radius: 5px;
     background:	#d6f0f5;
   }
+
 
   /* dashboard */
   .main-dashboard-container {
